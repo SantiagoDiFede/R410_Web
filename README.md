@@ -30,11 +30,12 @@
     
     2.document.getElementsByName("author").item(-1).content
     
-7
-    1. var d1 = new Date(dString);
-	   var d2 = new Date(Date.now());
-	   var total_seconds = Math.abs(d1 - d2) / 1000;
-	   var days_difference = Math.floor (total_seconds / (60 * 60 * 24));
+7.0
+    
+    1.  var d1 = new Date(dString);
+        var d2 = new Date(Date.now());
+	    var total_seconds = Math.abs(d1 - d2) / 1000;
+	    var days_difference = Math.floor (total_seconds / (60 * 60 * 24));
     
     2.On utilise document.getElementById("dateUntil").addEventListener("click",getNbDays)
     
