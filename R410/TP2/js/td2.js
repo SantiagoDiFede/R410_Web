@@ -74,6 +74,8 @@ function loadDiv(){
 	option3.setAttribute("value", "span");
 	option3.innerHTML = "span";
 
+
+
 	select.appendChild(option1);
 	select.appendChild(option2);
 	select.appendChild(option3);
@@ -84,6 +86,13 @@ function loadDiv(){
 	input.setAttribute("value", "My New Text Element");
 	div.appendChild(input);
 
+	let button = document.createElement("button");
+	button.setAttribute("type", "button");
+	button.setAttribute("id", "insert-button");
+	button.setAttribute("onclick", "insertElement(this)");
+	button.innerHTML = "Insert Element";
+	div.appendChild(button);
+
 
 	document.body.insertBefore(div, document.body.firstChild);
 }
@@ -91,6 +100,11 @@ function loadDiv(){
 function select2(event){
 	let target = event.target;
 	if(target == undefined){
+		return;
+	}
+	debugger;
+	let targetId = target.id;
+	if(target.id === "insert-div" || target.parentNode.id === "insert-div"){
 		return;
 	}
 	target.style.backgroundColor = "blue";
@@ -114,5 +128,11 @@ function insertElement(target){
 	let text = document.getElementById("insert-text");
 	let element = document.createElement(select.value);
 	element.innerHTML = text.value;
-	target.parentNode.insertBefore(element, target);
+	target.parentNode.insertBefore(element, target.nextSibling);
+}
+
+
+function search() {
+	//find all instances of the search text
+	let searchText = document.getElementById("search").value;
 }
