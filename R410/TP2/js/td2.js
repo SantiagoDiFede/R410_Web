@@ -133,4 +133,18 @@ function insertElement(target){
 
 
 function search() {
+	var texte = document.getElementById("texte-a-trouver").value;
+  	var surligneur = document.createElement("span");
+  	surligneur.style.backgroundColor = "yellow";
+  	var contenu = document.body.textContent;
+  	var position = contenu.indexOf(texte);
+
+  	while (position !== -1) {
+    		var range = document.createRange();
+    		range.setStart(contenu.parentNode, position);
+    		range.setEnd(contenu.parentNode, position + texte.length);
+    	range.surroundContents(surligneur);
+    	contenu = contenu.slice(position + texte.length);
+    	position = contenu.indexOf(texte);
+  }
 }
