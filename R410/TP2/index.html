@@ -16,19 +16,21 @@
 
 <p >  Malice et ignominies </p>
 <div> <ol> </ol></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<input id="search" type="text" value="test">
+<input onfocusout="clearIt()" oninput="mark(this.value)"  value="Texte ici" id="search" placeholder="Texte ici">
+<button onclick="mark(search.value)">SEARCH</button>
+<button onclick="clearIt()">CLEAR</button>
 
-<button id="search" onsubmit="search()" >Search</button>
 
-<div id="searchable">
-	Proin ornare nunc sodales <span>ornare</span> lorem rhoncus ornare fringilla
-</div>
-<div>
-	Proin ornare nunc sodales or<span>nare</span> lorem rhoncus ornare fringilla
-</div>
-<div>
-	Proin ornare nunc sodales ornare lorem rhoncus ornare fringilla
+<div id="main">
+	<div >
+		Proin ornare nunc sodales <span>ornare</span> lorem rhoncus ornare fringilla
+	</div>
+	<div>
+		Proin ornare nunc sodales or<span>nare</span> lorem rhoncus ornare fringilla
+	</div>
+	<div>
+		Proin ornare nunc sodales ornare lorem rhoncus ornare fringilla
+	</div>
 </div>
 
 

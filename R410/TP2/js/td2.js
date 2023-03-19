@@ -132,19 +132,17 @@ function insertElement(target){
 }
 
 
-function search() {
-	var texte = document.getElementById("search").value;
-  	var surligneur = document.createElement("span");
-  	surligneur.style.backgroundColor = "yellow";
-  	var contenu = document.body.textContent;
-  	var position = contenu.indexOf(texte);
-
-  	while (position !== -1) {
-    		var range = document.createRange();
-    		range.setStart(contenu.parentNode, position);
-    		range.setEnd(contenu.parentNode, position + texte.length);
-    	range.surroundContents(surligneur);
-    	contenu = contenu.slice(position + texte.length);
-    	position = contenu.indexOf(texte);
-  }
+function mark(it){
+	clearIt()
+	if (it.length > 2){
+		let c = new RegExp(it, "ig")
+		main.innerHTML = main.innerHTML.replace(c,"<mark>"+it+"</mark>")
+	}
 }
+
+function clearIt(){
+	let b = new RegExp("mark>", "ig")
+	main.innerHTML = main.innerHTML.replace(b,"wbr>")
+}
+
+mark(search.value)

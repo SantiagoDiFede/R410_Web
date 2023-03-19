@@ -10,3 +10,19 @@
 .highlight {
 	background-color: #EEF43B;
 }
+
+input[type="text"] {
+	width: 50%;
+	margin:10px;
+	padding: 5px;
+	float:left;
+	clear:left;
+}
+
+.bold {
+	font-weight: 700;
+}
+table td {
+	border: solid 1px #ccc;
+	padding: 3px;
+}
