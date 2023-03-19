@@ -133,7 +133,7 @@ function insertElement(target){
 
 
 function search() {
-	var texte = document.getElementById("texte-a-trouver").value;
+	var texte = document.getElementById("search").value;
   	var surligneur = document.createElement("span");
   	surligneur.style.backgroundColor = "yellow";
   	var contenu = document.body.textContent;
