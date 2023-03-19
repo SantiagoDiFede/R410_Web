@@ -133,6 +133,4 @@ function insertElement(target){
 
 
 function search() {
-	//find all instances of the search text
-	let searchText = document.getElementById("search").value;
 }
